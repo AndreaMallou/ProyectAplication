@@ -1,0 +1,51 @@
+﻿@model IEnumerable< ProyectAplication.Models.Constellation>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name_C)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Hemisphere)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Period)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name_S)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name_C)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Hemisphere)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Period)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name_S)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IdConstellation }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IdConstellation }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IdConstellation })
+        </td>
+    </tr>
+}
+
+</table>
