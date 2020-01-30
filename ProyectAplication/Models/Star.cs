@@ -7,6 +7,7 @@ using System.Web;
 namespace ProyectAplication.Models
 {
     //THIS IS THE CONSTELLATION CLASS, WITH ITS ATRIBUTES
+    //of course
     public class Star
     {
         [Key]
